@@ -5,6 +5,7 @@ import cn.dev33.satoken.interceptor.SaInterceptor;
 import cn.dev33.satoken.router.SaRouter;
 import cn.dev33.satoken.serializer.impl.SaSerializerTemplateForJdkUseBase64;
 import cn.dev33.satoken.stp.StpUtil;
+import com.example.firstdome.entitys.properties.SaTokenProperties;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

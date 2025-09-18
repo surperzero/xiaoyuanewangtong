@@ -9,8 +9,18 @@ import com.example.firstdome.mapper.UserMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Map;
+
 @Service
 @Transactional
 public interface UserService extends IService<User> {
     SaResult login(LoginUser loginUser);
+    SaResult selectUser(Long id);
+    SaResult updateUser(User user);
+    SaResult registerUser(User user);
+    SaResult savaUser(User user);
+    SaResult deleteUser(Long id);
+
+
+    SaResult selectPage(Integer current, Integer size, Map<String, Object> seachMap);
 }
