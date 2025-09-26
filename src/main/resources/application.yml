@@ -4,6 +4,7 @@ spring:
   config:
     import:
       - classpath:satoken-config.yml
+      - classpath:file-config.yml
   application:
     name: project
   datasource:

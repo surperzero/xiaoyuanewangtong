@@ -1,4 +1,5 @@
 satoken-config:
   whitelist:
     - /user/login
+    - /file/text
   verify-key: xiaoguyoudianshuai
