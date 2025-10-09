@@ -33,6 +33,18 @@ public class BookServiceImp extends ServiceImpl<BookMapper, Book> implements Boo
     private final UserMapper userMapper;
     private final FileProperties fileProperties;
     private final fileMapper fileMapper;
+
+    @Override
+    public List<String> getImageNames() {
+        List<String> list = new ArrayList<>();
+        List<Book> books = bookMapper.selectList(null);
+        for (Book book : books) {
+            list.add(book.getBackImage().substring(book.getBackImage().lastIndexOf("/") + 1));
+            list.add(book.getCoverImage().substring(book.getCoverImage().lastIndexOf("/") + 1));
+        }
+        return list;
+    }
+
     /**
      * 保存书籍
      * @param files

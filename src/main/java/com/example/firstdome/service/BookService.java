@@ -7,10 +7,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.List;
+
 
 @Service
 @Transactional
 public interface BookService extends IService<Book> {
+    List<String> getImageNames();
 
     SaResult savaBook(MultipartFile[] files, Book book);
 

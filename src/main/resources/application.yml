@@ -5,6 +5,10 @@ spring:
     import:
       - classpath:satoken-config.yml
       - classpath:file-config.yml
+  quartz:
+    job-store-type: jdbc #使用数据库的形式进行定时任务持久存储，默认支持mysql数据库
+    jdbc:
+      initialize-schema: always #自动生成定时任务表
   application:
     name: project
   datasource:
